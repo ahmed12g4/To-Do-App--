@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <title>To-Do App</title>
+    <link
+      rel="icon"
+      href="out.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <span class="logo"
+        ><i class="fa-solid fa-user"></i><span class="text">To - Do</span></span
+      >
+      <ul class="nav-bar">
+        <li class="active">
+          <a href="index.html"> <i class="fa-solid fa-house-user"></i></a>
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fa-regular fa-calendar" style="color: #000000"></i
+          ></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-solid fa-list" id="menuIcon"></i></a>
+
+          <!-- القائمة المنسدلة -->
+          <div class="dropdown-menu" id="dropdownMenu">
+            <ul>
+              <li><a href="daily-tasks.html">المهام اليومية</a></li>
+              <li><a href="completed-tasks.html">المهام المنجزة</a></li>
+              <li><a href="settings.html">إعدادات</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </header>
+
+    <div class="app">
+      <h1>مهامي النهاردة</h1>
+
+      <div class="input-group">
+        <input type="text" id="taskInput" placeholder="اكتب مهمة جديدة" />
+        <button id="addBtn">إضافة</button>
+      </div>
+
+      <ul id="taskList">
+        <!-- المهام بتظهر هنا -->
+      </ul>
+    </div>
+
+    <script src="daily-tasks.js"></script>
+    <!-- ملف المهام اليومية -->
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <title>To-Do App</title>
+    <link
+      rel="icon"
+      href="out.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <span class="logo"
+        ><i class="fa-solid fa-user"></i><span class="text">To - Do</span></span
+      >
+      <ul class="nav-bar">
+        <li class="active">
+          <a href="index.html"> <i class="fa-solid fa-house-user"></i></a>
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fa-regular fa-calendar" style="color: #000000"></i
+          ></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-solid fa-list" id="menuIcon"></i></a>
+
+          <!-- القائمة المنسدلة -->
+          <div class="dropdown-menu" id="dropdownMenu">
+            <ul>
+              <li><a href="daily-tasks.html">المهام اليومية</a></li>
+              <li><a href="completed-tasks.html">المهام المنجزة</a></li>
+              <li><a href="settings.html">إعدادات</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </header>
+    <div class="app" style="margin-top: 50px">
+      <h1>إعدادات التطبيق ⚙️</h1>
+      <ul>
+        <li>
+          <label>
+            <input type="checkbox" id="darkModeToggle" />
+            تفعيل الوضع الداكن (تجريبي)
+          </label>
+        </li>
+        <li>
+          <button class="clear" onclick="clearTasks()">مسح كل المهام</button>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      function clearTasks() {
+        if (confirm("هل أنت متأكد أنك تريد حذف جميع المهام؟")) {
+          localStorage.removeItem("tasks");
+          alert("تم حذف جميع المهام ✅");
+        }
+      }
+
+      // الوضع الداكن (تجريبي)
+      const darkToggle = document.getElementById("darkModeToggle");
+      darkToggle.addEventListener("change", () => {
+        if (darkToggle.checked) {
+          document.body.style.backgroundColor = "#333";
+          document.body.style.color = "#fff";
+        } else {
+          document.body.style.backgroundColor = "";
+          document.body.style.color = "";
+        }
+      });
+    </script>
+  </body>
+</html>
