@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <!DOCTYPE html>
 <html lang="ar">
   <head>
@@ -64,70 +64,3 @@
     </script>
   </body>
 </html>
-=======
-<!DOCTYPE html>
-<html lang="ar">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    />
-    <title>To-Do App</title>
-    <link
-      rel="icon"
-      href="out.png"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <span class="logo"
-        ><i class="fa-solid fa-user"></i><span class="text">To - Do</span></span
-      >
-      <ul class="nav-bar">
-        <li class="active">
-          <a href="index.html"> <i class="fa-solid fa-house-user"></i></a>
-        </li>
-        <li>
-          <a href="#"
-            ><i class="fa-regular fa-calendar" style="color: #000000"></i
-          ></a>
-        </li>
-        <li>
-          <a href="#"><i class="fa-solid fa-list" id="menuIcon"></i></a>
-
-          <!-- القائمة المنسدلة -->
-          <div class="dropdown-menu" id="dropdownMenu">
-            <ul>
-              <li><a href="daily-tasks.html">المهام اليومية</a></li>
-              <li><a href="completed-tasks.html">المهام المنجزة</a></li>
-              <li><a href="settings.html">إعدادات</a></li>
-            </ul>
-          </div>
-        </li>
-      </ul>
-    </header>
-
-    <div class="app" style="margin-top: 50px">
-      <h1>قائمة المهام المنجزة ✅</h1>
-      <ul id="completedList"></ul>
-    </div>
-
-    <script>
-      const completedList = document.getElementById("completedList");
-      const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
-
-      tasks.forEach((task) => {
-        if (task.completed) {
-          const li = document.createElement("li");
-          li.innerHTML = `<span>${task.text}</span><small class="task-date">${task.date}</small>`;
-          completedList.appendChild(li);
-        }
-      });
-    </script>
-  </body>
-</html>
->>>>>>> ada5144fa0fcb26b53d0f88fc105ecf4b64aaee5
